@@ -2,6 +2,7 @@
 .env
 sunup.db
 __pycache__/
+*.pyc
 *.py[codz]
 *$py.class
 
