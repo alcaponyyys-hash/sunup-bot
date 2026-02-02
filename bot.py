@@ -20,14 +20,14 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 # =====================
 # CONFIG (PREENCHA!)
 # =====================
-GUILD_ID = 1254110433346977983
+GUILD_ID = 591819416786698251
 
-MAIN_CHANNEL_ID = 1254110433980190722      # canal de aviso (bot online)
-DROP_CHANNEL_ID = 1254110433980190722      # canal dos drops
-JOIN_CHANNEL_ID = 1402645989978013767      # canal de participação
+MAIN_CHANNEL_ID = 709772107239653396      # canal de aviso (bot online)
+DROP_CHANNEL_ID = 709772107239653396      # canal dos drops
+JOIN_CHANNEL_ID = 714835863888068688      # canal de participação
 
-TOP_ROLE_ID = 1465857386232287263          # cargo TOP 1
-EVENT_ROLE_ID = 1467642321867640994        # cargo ☀️ SUN
+TOP_ROLE_ID = 1467871506267902166          # cargo TOP 1
+EVENT_ROLE_ID = 1467871344187281541        # cargo ☀️ SUN
 
 JOIN_EMOJI = "☀️"
 
@@ -508,3 +508,4 @@ if not DATABASE_URL:
     raise RuntimeError("DATABASE_URL não encontrado (adicione Postgres no Railway e exponha a variável).")
 
 bot.run(TOKEN)
+
