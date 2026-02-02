@@ -388,8 +388,8 @@ async def drop_test(ctx: commands.Context):
         await ctx.send("Não consegui enviar o drop. Verifique IDs/permissões.", delete_after=8)
 
 
-@bot.command(name="rank")
-async def rank(ctx: commands.Context):
+@bot.command(name="sunrank")
+async def sunrank(ctx: commands.Context):
     top = await get_top(10)
     if not top:
         await ctx.send(
@@ -419,8 +419,8 @@ async def meuspontos(ctx: commands.Context):
     )
 
 
-@bot.command(name="help_sunup")
-async def help_sunup(ctx: commands.Context):
+@bot.command(name="sunhelp")
+async def sunhelp(ctx: commands.Context):
     await ctx.send(
         "☀️ **SUN UP — AJUDA** ☀️\n\n"
         "• Reaja com ☀️ na mensagem de participação para receber o cargo **☀️ SUN**\n"
@@ -431,7 +431,7 @@ async def help_sunup(ctx: commands.Context):
         "☀️ 1 ponto | 🌊 2 pontos | 🍹 3 pontos\n"
         "🌟 SUPER DROP — 10 pontos (1%)\n\n"
         "**Comandos:**\n"
-        "`!rank` • `!meuspontos` • `!drop` (admin)\n",
+        "`!sunrank` • `!meuspontos` • `!drop` (admin)\n",
         allowed_mentions=discord.AllowedMentions.none()
     )
 
@@ -508,4 +508,5 @@ if not DATABASE_URL:
     raise RuntimeError("DATABASE_URL não encontrado (adicione Postgres no Railway e exponha a variável).")
 
 bot.run(TOKEN)
+
 
